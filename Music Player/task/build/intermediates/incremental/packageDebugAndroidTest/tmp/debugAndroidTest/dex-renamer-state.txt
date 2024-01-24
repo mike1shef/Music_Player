@@ -1,0 +1,4 @@
+#Wed Jan 24 18:01:21 CET 2024
+base.0=/Users/mikhailshauchenka/AndroidStudioProjects/Music Player/Music Player/task/build/intermediates/dex/debugAndroidTest/mergeDexDebugAndroidTest/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
