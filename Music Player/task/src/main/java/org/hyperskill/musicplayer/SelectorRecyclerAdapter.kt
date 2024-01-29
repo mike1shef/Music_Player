@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class SelectorRecyclerAdapter (
     private var loadedPlaylist : List<SongSelector>,
-    private val onItemClick : (SongSelector) -> Unit
+    //private val onItemClick : (SongSelector) -> Unit
     ) : RecyclerView.Adapter<SelectorRecyclerAdapter.SelectorViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectorViewHolder {
