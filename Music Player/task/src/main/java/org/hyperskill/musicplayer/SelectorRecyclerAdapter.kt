@@ -1,5 +1,6 @@
 package org.hyperskill.musicplayer
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class SelectorRecyclerAdapter (
     private var loadedPlaylist : List<SongSelector>,
-    //private val onItemClick : (SongSelector) -> Unit
     ) : RecyclerView.Adapter<SelectorRecyclerAdapter.SelectorViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectorViewHolder {
@@ -21,9 +21,12 @@ class SelectorRecyclerAdapter (
                     if (loadedPlaylist[position].isSelected){
                         loadedPlaylist[position].isSelected = false
                         holder.checkbox.isChecked = false
+                        holder.itemView.setBackgroundColor(Color.WHITE)
                     } else {
                         loadedPlaylist[position].isSelected = true
                        holder.checkbox.isChecked = true
+                        holder.itemView.setBackgroundColor(Color.LTGRAY)
+
                     }
                 }
             }
