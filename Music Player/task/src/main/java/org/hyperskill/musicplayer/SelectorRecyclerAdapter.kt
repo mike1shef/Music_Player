@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 
 class SelectorRecyclerAdapter (
-    var loadedPlaylist : List<SongSelector>,
+    private var loadedPlaylist : List<SongSelector>,
     ) : RecyclerView.Adapter<SelectorRecyclerAdapter.SelectorViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectorViewHolder {
@@ -49,8 +50,8 @@ class SelectorRecyclerAdapter (
     override fun getItemCount(): Int {
         return loadedPlaylist.size
     }
-    fun updateData(newSongs: List<Song>) {
-        this.loadedPlaylist = songSelectorConverter(newSongs)
+    fun updateData() {
+        this.loadedPlaylist = MainViewModel().selectedSongs
         notifyDataSetChanged()
     }
 
