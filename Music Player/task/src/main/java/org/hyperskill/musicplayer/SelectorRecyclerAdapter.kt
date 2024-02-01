@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class SelectorRecyclerAdapter (
-    private var loadedPlaylist : List<SongSelector>,
+    var loadedPlaylist : List<SongSelector>,
     ) : RecyclerView.Adapter<SelectorRecyclerAdapter.SelectorViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectorViewHolder {
@@ -25,7 +25,7 @@ class SelectorRecyclerAdapter (
                     } else {
                         loadedPlaylist[position].isSelected = true
                        holder.checkbox.isChecked = true
-                        holder.itemView.setBackgroundColor(Color.LTGRAY)
+                       holder.itemView.setBackgroundColor(Color.LTGRAY)
 
                     }
                 }
@@ -41,9 +41,17 @@ class SelectorRecyclerAdapter (
         holder.title.text = song.song.title
         holder.checkbox.isChecked = song.isSelected
         holder.duration.text = convertMsToTime(song.song.duration)
+
+        if (holder.checkbox.isChecked) {
+            holder.itemView.setBackgroundColor(Color.LTGRAY)
+        } else holder.itemView.setBackgroundColor(Color.WHITE)
     }
     override fun getItemCount(): Int {
         return loadedPlaylist.size
+    }
+    fun updateData(newSongs: List<Song>) {
+        this.loadedPlaylist = songSelectorConverter(newSongs)
+        notifyDataSetChanged()
     }
 
     class SelectorViewHolder(view: View) : RecyclerView.ViewHolder(view) {
