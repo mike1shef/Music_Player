@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.hyperskill.musicplayer.Stage1UnitTestB" tests="9" skipped="1" failures="0" errors="0" timestamp="2024-02-02T17:57:16" hostname="Kristinas-MacBook-Pro.local" time="9.981">
+  <properties/>
+  <testcase name="checkPlayerControllerFragmentComponentsExist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="7.471"/>
+  <testcase name="checkMenuItemLoadPlaylist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.911"/>
+  <testcase name="checkControllerPlayPauseButtonBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.422"/>
+  <testcase name="checkSearchButtonNoSongsFound" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="checkMenuItemDeletePlaylist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.349"/>
+  <testcase name="checkControllerStopButtonBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.237"/>
+  <testcase name="checkControllerSeekBarBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.19"/>
+  <testcase name="checkMainActivityComponentsExist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.188"/>
+  <testcase name="checkMenuItemAddPlaylistWithNoSongs" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.208"/>
+  <system-out><![CDATA[Called loadFromPath(/system/framework/framework-res.apk, true); mode=binary sdk=29
+resources.arsc in APK '/Users/mikhailshauchenka/.m2/repository/org/robolectric/android-all-instrumented/10-robolectric-5803371-i3/android-all-instrumented-10-robolectric-5803371-i3.jar' is compressed.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
