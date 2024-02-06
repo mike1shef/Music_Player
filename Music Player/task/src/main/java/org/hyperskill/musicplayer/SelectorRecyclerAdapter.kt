@@ -9,7 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class SelectorRecyclerAdapter (
-    private var loadedPlaylist : List<SongSelector>,
+     private  var loadedPlaylist : List<SongSelector>,
+    private val viewModel : MainViewModel,
     ) : RecyclerView.Adapter<SelectorRecyclerAdapter.SelectorViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectorViewHolder {
@@ -50,8 +51,7 @@ class SelectorRecyclerAdapter (
         return loadedPlaylist.size
     }
     fun updateData() {
-        this.loadedPlaylist = MainViewModel().selectedSongs
-        notifyDataSetChanged()
+        this.loadedPlaylist = viewModel.selectedSongs
     }
 
     class SelectorViewHolder(view: View) : RecyclerView.ViewHolder(view) {
