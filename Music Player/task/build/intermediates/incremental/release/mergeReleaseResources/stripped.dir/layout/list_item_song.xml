@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageButton
+        android:id="@+id/songItemImgBtnPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="TrackIcon" />
+
+    <TextView
+        android:id="@+id/songItemTvArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="@+id/songItemImgBtnPlayPause"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/songItemImgBtnPlayPause"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="13sp"
+        tools:text="artist1" />
+
+    <TextView
+        android:id="@+id/songItemTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/songItemImgBtnPlayPause"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="13sp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:layout_below="@id/songItemTvArtist"
+        android:layout_alignBaseline="@+id/songItemImgBtnPlayPause"
+        tools:text="title 1" />
+
+    <TextView
+        android:id="@+id/songItemTvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:layout_alignBaseline="@+id/songItemTvTitle"
+        android:layout_marginEnd="8dp"
+        tools:text="00:00" />
+
+
+</RelativeLayout>

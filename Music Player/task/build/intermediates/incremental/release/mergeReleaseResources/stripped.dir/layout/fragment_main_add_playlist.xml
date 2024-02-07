@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    tools:context=".MainAddPlaylistFragment">
+
+    <EditText
+        android:id="@+id/addPlaylistEtPlaylistName"
+        android:hint="Playlist Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/addPlaylistBtnCancel"
+            android:text="@android:string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+
+        <Button
+            android:id="@+id/addPlaylistBtnOk"
+            android:layout_width="wrap_content"
+            android:text="@android:string/ok"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+</LinearLayout>

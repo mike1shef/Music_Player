@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.hyperskill.musicplayer.Stage1UnitTestB" tests="9" skipped="1" failures="0" errors="0" timestamp="2024-02-06T09:28:55" hostname="Kristinas-MacBook-Pro.local" time="0.923">
+<testsuite name="org.hyperskill.musicplayer.Stage1UnitTestB" tests="9" skipped="1" failures="0" errors="0" timestamp="2024-02-07T16:26:24" hostname="Kristinas-MacBook-Pro.local" time="0.775">
   <properties/>
-  <testcase name="checkPlayerControllerFragmentComponentsExist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.11"/>
-  <testcase name="checkMenuItemLoadPlaylist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.164"/>
-  <testcase name="checkControllerPlayPauseButtonBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.11"/>
+  <testcase name="checkPlayerControllerFragmentComponentsExist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.097"/>
+  <testcase name="checkMenuItemLoadPlaylist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.116"/>
+  <testcase name="checkControllerPlayPauseButtonBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.089"/>
   <testcase name="checkSearchButtonNoSongsFound" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="checkMenuItemDeletePlaylist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.168"/>
-  <testcase name="checkControllerStopButtonBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.104"/>
-  <testcase name="checkControllerSeekBarBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.088"/>
-  <testcase name="checkMainActivityComponentsExist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.102"/>
-  <testcase name="checkMenuItemAddPlaylistWithNoSongs" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.076"/>
+  <testcase name="checkMenuItemDeletePlaylist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.109"/>
+  <testcase name="checkControllerStopButtonBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.088"/>
+  <testcase name="checkControllerSeekBarBeforeSearch" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.095"/>
+  <testcase name="checkMainActivityComponentsExist" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.087"/>
+  <testcase name="checkMenuItemAddPlaylistWithNoSongs" classname="org.hyperskill.musicplayer.Stage1UnitTestB" time="0.092"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

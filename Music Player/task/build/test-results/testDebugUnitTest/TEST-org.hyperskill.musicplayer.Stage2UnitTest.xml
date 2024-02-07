@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.hyperskill.musicplayer.Stage2UnitTest" tests="26" skipped="0" failures="7" errors="0" timestamp="2024-02-06T09:28:36" hostname="Kristinas-MacBook-Pro.local" time="19.048">
+<testsuite name="org.hyperskill.musicplayer.Stage2UnitTest" tests="26" skipped="0" failures="3" errors="0" timestamp="2024-02-07T16:26:05" hostname="Kristinas-MacBook-Pro.local" time="19.135">
   <properties/>
-  <testcase name="checkDeletePlaylistOnPlayMusicStateWithCurrentPlaylistBeingDeleted" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="8.253"/>
-  <testcase name="checkListItemImgChangeMixedClicks" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.536"/>
-  <testcase name="checkCurrentTrackImgChangeAfterControllerStopButtonClickWithCurrentTrackPlaying" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.394"/>
-  <testcase name="checkWhenCurrentTrackChangesAndOldCurrentTrackIsNotPlayingImageRemains" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.301"/>
-  <testcase name="checkAddingPlaylistWithEmptyListAddedToastErrorEmptyListMessage" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.362"/>
-  <testcase name="checkSongListAfterInitialClickOnSearch" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.287"/>
-  <testcase name="checkAfterInitialSearchFirstListItemIsCurrentTrackAndRespondToControllerPlayPauseButton" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.305"/>
-  <testcase name="checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.858">
-    <failure message="java.lang.AssertionError: Incorrect number of list items expected:&lt;6&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Incorrect number of list items expected:&lt;6&gt; but was:&lt;0&gt;
+  <testcase name="checkDeletePlaylistOnPlayMusicStateWithCurrentPlaylistBeingDeleted" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="8.395"/>
+  <testcase name="checkListItemImgChangeMixedClicks" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.47"/>
+  <testcase name="checkCurrentTrackImgChangeAfterControllerStopButtonClickWithCurrentTrackPlaying" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.387"/>
+  <testcase name="checkWhenCurrentTrackChangesAndOldCurrentTrackIsNotPlayingImageRemains" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.317"/>
+  <testcase name="checkAddingPlaylistWithEmptyListAddedToastErrorEmptyListMessage" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.41"/>
+  <testcase name="checkSongListAfterInitialClickOnSearch" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.262"/>
+  <testcase name="checkAfterInitialSearchFirstListItemIsCurrentTrackAndRespondToControllerPlayPauseButton" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.262"/>
+  <testcase name="checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.772">
+    <failure message="java.lang.AssertionError: songSelectorItemCheckBox should remain isChecked value after list loaded on ADD_PLAYLIST state expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError">java.lang.AssertionError: songSelectorItemCheckBox should remain isChecked value after list loaded on ADD_PLAYLIST state expected:&lt;true&gt; but was:&lt;false&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:136)
+	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById$1$3.invoke(Stage2UnitTest.kt:1197)
+	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById$1$3.invoke(Stage2UnitTest.kt:1189)
+	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:158)
 	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById$1.invoke(Stage2UnitTest.kt:1189)
 	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById$1.invoke(Stage2UnitTest.kt:1132)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
@@ -36,56 +38,25 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.base/java.lang.Thread.run(Unknown Source)
-</failure>
-  </testcase>
-  <testcase name="checkAddPlaylistStateTriggeredByMenuItem" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.354"/>
-  <testcase name="checkWhenCurrentTrackChangesAndOldCurrentTrackIsPlayingImageChangesToPaused" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.197"/>
-  <testcase name="checkLoadPlaylistInAddPlaylistStateKeepsCurrentTrackWhenReturningToPlayMusicState" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.635"/>
-  <testcase name="checkLoadPlaylistInPlayMusicStateAfterAddingPlaylistWithMainMenuItem" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.528"/>
-  <testcase name="checkCancelingAddPlaylistKeepsCurrentTrackPlayingState" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.47">
-    <failure message="java.lang.AssertionError: A track that is not the currentTrack should remain not being the currentTrack after canceling adding a playlist" type="java.lang.AssertionError">java.lang.AssertionError: A track that is not the currentTrack should remain not being the currentTrack after canceling adding a playlist
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertCreatedFromResourceId(MusicPlayerUnitTests.kt:297)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkCancelingAddPlaylistKeepsCurrentTrackPlayingState$1$2.invoke(Stage2UnitTest.kt:1481)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkCancelingAddPlaylistKeepsCurrentTrackPlayingState$1$2.invoke(Stage2UnitTest.kt:1431)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:158)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkCancelingAddPlaylistKeepsCurrentTrackPlayingState$1.invoke(Stage2UnitTest.kt:1431)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkCancelingAddPlaylistKeepsCurrentTrackPlayingState$1.invoke(Stage2UnitTest.kt:1401)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage2UnitTest.checkCancelingAddPlaylistKeepsCurrentTrackPlayingState(Stage2UnitTest.kt:1401)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
 	Suppressed: org.robolectric.android.internal.AndroidTestEnvironment$UnExecutedRunnablesException: Main looper has queued unexecuted runnables. This might be the cause of the test failure. You might need a shadowOf(Looper.getMainLooper()).idle() call.
 </failure>
   </testcase>
-  <testcase name="checkAddingPlaylistWithBothEmptyListAndEmptyPlaylistNameToastErrorEmptyListMessage" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.246"/>
-  <testcase name="checkDeletePlaylistOnPlayMusicStateDeletingPlaylistThatIsNotCurrentPlaylist" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.553"/>
-  <testcase name="checkAddingPlaylistWithReservedPlaylistNameAllSongsToastErrorReservedNameMessage" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.295"/>
-  <testcase name="checkSearchInPlayMusicStateChangeCurrentPlaylistToAllSongs" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.401"/>
-  <testcase name="checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.456">
-    <failure message="java.lang.AssertionError: Incorrect number of list items expected:&lt;3&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Incorrect number of list items expected:&lt;3&gt; but was:&lt;0&gt;
+  <testcase name="checkAddPlaylistStateTriggeredByMenuItem" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.354"/>
+  <testcase name="checkWhenCurrentTrackChangesAndOldCurrentTrackIsPlayingImageChangesToPaused" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.256"/>
+  <testcase name="checkLoadPlaylistInAddPlaylistStateKeepsCurrentTrackWhenReturningToPlayMusicState" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.649"/>
+  <testcase name="checkLoadPlaylistInPlayMusicStateAfterAddingPlaylistWithMainMenuItem" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.45"/>
+  <testcase name="checkCancelingAddPlaylistKeepsCurrentTrackPlayingState" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.333"/>
+  <testcase name="checkAddingPlaylistWithBothEmptyListAndEmptyPlaylistNameToastErrorEmptyListMessage" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.202"/>
+  <testcase name="checkDeletePlaylistOnPlayMusicStateDeletingPlaylistThatIsNotCurrentPlaylist" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.441"/>
+  <testcase name="checkAddingPlaylistWithReservedPlaylistNameAllSongsToastErrorReservedNameMessage" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.233"/>
+  <testcase name="checkSearchInPlayMusicStateChangeCurrentPlaylistToAllSongs" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.377"/>
+  <testcase name="checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.543">
+    <failure message="java.lang.AssertionError: Incorrect number of list items expected:&lt;3&gt; but was:&lt;2&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Incorrect number of list items expected:&lt;3&gt; but was:&lt;2&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
 	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:136)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState$1.invoke(Stage2UnitTest.kt:1321)
+	at org.hyperskill.musicplayer.Stage2UnitTest$checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState$1.invoke(Stage2UnitTest.kt:1339)
 	at org.hyperskill.musicplayer.Stage2UnitTest$checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState$1.invoke(Stage2UnitTest.kt:1286)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
@@ -109,113 +80,20 @@
 	at java.base/java.lang.Thread.run(Unknown Source)
 </failure>
   </testcase>
-  <testcase name="checkDeletePlaylistOnAddPlaylistStateDeletingPlaylistThatIsNotDisplayingAndNotCurrentPlaylist" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.608"/>
-  <testcase name="checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.511">
-    <failure message="java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;0&gt;
+  <testcase name="checkDeletePlaylistOnAddPlaylistStateDeletingPlaylistThatIsNotDisplayingAndNotCurrentPlaylist" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.602"/>
+  <testcase name="checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.58"/>
+  <testcase name="checkCancellingAddPlaylistKeepsCurrentPlaylist" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.499"/>
+  <testcase name="checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.495"/>
+  <testcase name="checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.468"/>
+  <testcase name="checkLoadPlaylistInPlayMusicStateAfterAddingPlaylistWithLongClick" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.462"/>
+  <testcase name="checkSongListItemChangesImageOnImageButtonClick" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.136"/>
+  <testcase name="checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.776">
+    <failure message="java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;3&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;3&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
 	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:136)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState$1.invoke(Stage2UnitTest.kt:1975)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState$1.invoke(Stage2UnitTest.kt:1939)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage2UnitTest.checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState(Stage2UnitTest.kt:1939)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-</failure>
-  </testcase>
-  <testcase name="checkCancellingAddPlaylistKeepsCurrentPlaylist" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.543"/>
-  <testcase name="checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.406">
-    <failure message="java.lang.AssertionError: A unselected song should remain unselected after adding a playlist" type="java.lang.AssertionError">java.lang.AssertionError: A unselected song should remain unselected after adding a playlist
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertCreatedFromResourceId(MusicPlayerUnitTests.kt:297)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack$1$2.invoke(Stage2UnitTest.kt:1067)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack$1$2.invoke(Stage2UnitTest.kt:1022)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:158)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack$1.invoke(Stage2UnitTest.kt:1022)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack$1.invoke(Stage2UnitTest.kt:989)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage2UnitTest.checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack(Stage2UnitTest.kt:989)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-	Suppressed: org.robolectric.android.internal.AndroidTestEnvironment$UnExecutedRunnablesException: Main looper has queued unexecuted runnables. This might be the cause of the test failure. You might need a shadowOf(Looper.getMainLooper()).idle() call.
-</failure>
-  </testcase>
-  <testcase name="checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.395">
-    <failure message="java.lang.AssertionError: A unselected song should remain unselected after adding a playlist" type="java.lang.AssertionError">java.lang.AssertionError: A unselected song should remain unselected after adding a playlist
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertCreatedFromResourceId(MusicPlayerUnitTests.kt:297)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack$1$2.invoke(Stage2UnitTest.kt:914)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack$1$2.invoke(Stage2UnitTest.kt:869)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:158)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack$1.invoke(Stage2UnitTest.kt:869)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack$1.invoke(Stage2UnitTest.kt:835)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage2UnitTest.checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack(Stage2UnitTest.kt:835)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-	Suppressed: org.robolectric.android.internal.AndroidTestEnvironment$UnExecutedRunnablesException: Main looper has queued unexecuted runnables. This might be the cause of the test failure. You might need a shadowOf(Looper.getMainLooper()).idle() call.
-</failure>
-  </testcase>
-  <testcase name="checkLoadPlaylistInPlayMusicStateAfterAddingPlaylistWithLongClick" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.466"/>
-  <testcase name="checkSongListItemChangesImageOnImageButtonClick" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.135"/>
-  <testcase name="checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted" classname="org.hyperskill.musicplayer.Stage2UnitTest" time="0.549">
-    <failure message="java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;0&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:136)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted$1.invoke(Stage2UnitTest.kt:1865)
+	at org.hyperskill.musicplayer.Stage2UnitTest$checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted$1.invoke(Stage2UnitTest.kt:1890)
 	at org.hyperskill.musicplayer.Stage2UnitTest$checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted$1.invoke(Stage2UnitTest.kt:1779)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)

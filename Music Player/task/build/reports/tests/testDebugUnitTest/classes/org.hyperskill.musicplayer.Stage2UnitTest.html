@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">7</div>
+<div class="counter">3</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">19.044s</div>
+<div class="counter">19.131s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">73%</div>
+<div class="percent">88%</div>
 <p>successful</p>
 </div>
 </td>
@@ -73,52 +73,15 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="checkCancelingAddPlaylistKeepsCurrentTrackPlayingState"></a>
-<h3 class="failures">checkCancelingAddPlaylistKeepsCurrentTrackPlayingState</h3>
-<span class="code">
-<pre>java.lang.AssertionError: A track that is not the currentTrack should remain not being the currentTrack after canceling adding a playlist
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertCreatedFromResourceId(MusicPlayerUnitTests.kt:297)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkCancelingAddPlaylistKeepsCurrentTrackPlayingState$1$2.invoke(Stage2UnitTest.kt:1481)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkCancelingAddPlaylistKeepsCurrentTrackPlayingState$1$2.invoke(Stage2UnitTest.kt:1431)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:158)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkCancelingAddPlaylistKeepsCurrentTrackPlayingState$1.invoke(Stage2UnitTest.kt:1431)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkCancelingAddPlaylistKeepsCurrentTrackPlayingState$1.invoke(Stage2UnitTest.kt:1401)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage2UnitTest.checkCancelingAddPlaylistKeepsCurrentTrackPlayingState(Stage2UnitTest.kt:1401)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-	Suppressed: org.robolectric.android.internal.AndroidTestEnvironment$UnExecutedRunnablesException: Main looper has queued unexecuted runnables. This might be the cause of the test failure. You might need a shadowOf(Looper.getMainLooper()).idle() call.
-</pre>
-</span>
-</div>
-<div class="test">
 <a name="checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted"></a>
 <h3 class="failures">checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;0&gt;
+<pre>java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;3&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
 	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:136)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted$1.invoke(Stage2UnitTest.kt:1865)
+	at org.hyperskill.musicplayer.Stage2UnitTest$checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted$1.invoke(Stage2UnitTest.kt:1890)
 	at org.hyperskill.musicplayer.Stage2UnitTest$checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted$1.invoke(Stage2UnitTest.kt:1779)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
@@ -147,89 +110,18 @@
 <a name="checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById"></a>
 <h3 class="failures">checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Incorrect number of list items expected:&lt;6&gt; but was:&lt;0&gt;
+<pre>java.lang.AssertionError: songSelectorItemCheckBox should remain isChecked value after list loaded on ADD_PLAYLIST state expected:&lt;true&gt; but was:&lt;false&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:136)
+	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById$1$3.invoke(Stage2UnitTest.kt:1197)
+	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById$1$3.invoke(Stage2UnitTest.kt:1189)
+	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:158)
 	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById$1.invoke(Stage2UnitTest.kt:1189)
 	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById$1.invoke(Stage2UnitTest.kt:1132)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
 	at org.hyperskill.musicplayer.Stage2UnitTest.checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById(Stage2UnitTest.kt:1132)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack"></a>
-<h3 class="failures">checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack</h3>
-<span class="code">
-<pre>java.lang.AssertionError: A unselected song should remain unselected after adding a playlist
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertCreatedFromResourceId(MusicPlayerUnitTests.kt:297)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack$1$2.invoke(Stage2UnitTest.kt:914)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack$1$2.invoke(Stage2UnitTest.kt:869)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:158)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack$1.invoke(Stage2UnitTest.kt:869)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack$1.invoke(Stage2UnitTest.kt:835)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage2UnitTest.checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack(Stage2UnitTest.kt:835)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-	Suppressed: org.robolectric.android.internal.AndroidTestEnvironment$UnExecutedRunnablesException: Main looper has queued unexecuted runnables. This might be the cause of the test failure. You might need a shadowOf(Looper.getMainLooper()).idle() call.
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack"></a>
-<h3 class="failures">checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack</h3>
-<span class="code">
-<pre>java.lang.AssertionError: A unselected song should remain unselected after adding a playlist
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertCreatedFromResourceId(MusicPlayerUnitTests.kt:297)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack$1$2.invoke(Stage2UnitTest.kt:1067)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack$1$2.invoke(Stage2UnitTest.kt:1022)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:158)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack$1.invoke(Stage2UnitTest.kt:1022)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack$1.invoke(Stage2UnitTest.kt:989)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage2UnitTest.checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack(Stage2UnitTest.kt:989)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -255,50 +147,16 @@
 <a name="checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState"></a>
 <h3 class="failures">checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Incorrect number of list items expected:&lt;3&gt; but was:&lt;0&gt;
+<pre>java.lang.AssertionError: Incorrect number of list items expected:&lt;3&gt; but was:&lt;2&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
 	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:136)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState$1.invoke(Stage2UnitTest.kt:1321)
+	at org.hyperskill.musicplayer.Stage2UnitTest$checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState$1.invoke(Stage2UnitTest.kt:1339)
 	at org.hyperskill.musicplayer.Stage2UnitTest$checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState$1.invoke(Stage2UnitTest.kt:1286)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
 	at org.hyperskill.musicplayer.Stage2UnitTest.checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState(Stage2UnitTest.kt:1286)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState"></a>
-<h3 class="failures">checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Incorrect number of list items expected:&lt;10&gt; but was:&lt;0&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertListItems(MusicPlayerUnitTests.kt:136)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState$1.invoke(Stage2UnitTest.kt:1975)
-	at org.hyperskill.musicplayer.Stage2UnitTest$checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState$1.invoke(Stage2UnitTest.kt:1939)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage2UnitTest.checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState(Stage2UnitTest.kt:1939)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -337,127 +195,127 @@
 </tr>
 <tr>
 <td class="success">checkAddingPlaylistWithBothEmptyListAndEmptyPlaylistNameToastErrorEmptyListMessage</td>
-<td class="success">0.246s</td>
+<td class="success">0.202s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkAddingPlaylistWithEmptyListAddedToastErrorEmptyListMessage</td>
-<td class="success">0.362s</td>
+<td class="success">0.410s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkAddingPlaylistWithReservedPlaylistNameAllSongsToastErrorReservedNameMessage</td>
-<td class="success">0.295s</td>
+<td class="success">0.233s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkAfterInitialSearchFirstListItemIsCurrentTrackAndRespondToControllerPlayPauseButton</td>
-<td class="success">0.305s</td>
+<td class="success">0.262s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">checkCancelingAddPlaylistKeepsCurrentTrackPlayingState</td>
-<td class="failures">0.470s</td>
-<td class="failures">failed</td>
+<td class="success">checkCancelingAddPlaylistKeepsCurrentTrackPlayingState</td>
+<td class="success">0.333s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkCancellingAddPlaylistKeepsCurrentPlaylist</td>
-<td class="success">0.543s</td>
+<td class="success">0.499s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkCurrentTrackImgChangeAfterControllerStopButtonClickWithCurrentTrackPlaying</td>
-<td class="success">0.394s</td>
+<td class="success">0.387s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkDeletePlaylistOnAddPlaylistStateDeletingPlaylistThatIsNotDisplayingAndNotCurrentPlaylist</td>
-<td class="success">0.608s</td>
+<td class="success">0.602s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">checkDeletePlaylistOnAddPlaylistStateWithCurrentDisplayingAndCurrentPlaylistBeingDeleted</td>
-<td class="failures">0.549s</td>
+<td class="failures">0.776s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">checkDeletePlaylistOnPlayMusicStateDeletingPlaylistThatIsNotCurrentPlaylist</td>
-<td class="success">0.553s</td>
+<td class="success">0.441s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkDeletePlaylistOnPlayMusicStateWithCurrentPlaylistBeingDeleted</td>
-<td class="success">8.253s</td>
+<td class="success">8.395s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkListItemImgChangeMixedClicks</td>
-<td class="success">0.536s</td>
+<td class="success">0.470s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkLoadPlaylistInAddPlaylistStateKeepsCurrentTrackWhenReturningToPlayMusicState</td>
-<td class="success">0.635s</td>
+<td class="success">0.649s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">checkLoadPlaylistInAddPlaylistStateKeepsSelectedItemsById</td>
-<td class="failures">0.858s</td>
+<td class="failures">0.772s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">checkLoadPlaylistInPlayMusicStateAfterAddingPlaylistWithLongClick</td>
-<td class="success">0.466s</td>
+<td class="success">0.462s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkLoadPlaylistInPlayMusicStateAfterAddingPlaylistWithMainMenuItem</td>
-<td class="success">0.528s</td>
+<td class="success">0.450s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack</td>
-<td class="failures">0.395s</td>
-<td class="failures">failed</td>
+<td class="success">checkLoadPlaylistOnPlayMusicStateWithCurrentTrackKeepsCurrentTrack</td>
+<td class="success">0.468s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack</td>
-<td class="failures">0.406s</td>
-<td class="failures">failed</td>
+<td class="success">checkLoadPlaylistOnPlayMusicStateWithoutCurrentTrackChangesCurrentTrack</td>
+<td class="success">0.495s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">checkPlaylistSavedAfterSelectingSongsAfterLoadingPlaylistInAddPlaylistState</td>
-<td class="failures">0.456s</td>
+<td class="failures">0.543s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState</td>
-<td class="failures">0.511s</td>
-<td class="failures">failed</td>
+<td class="success">checkSearchInAddPlaylistStateDisplaysAllSongsOnAddPlaylistStateAndKeepsCurrentPlaylistInPlayMusicState</td>
+<td class="success">0.580s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkSearchInPlayMusicStateChangeCurrentPlaylistToAllSongs</td>
-<td class="success">0.401s</td>
+<td class="success">0.377s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkSongListAfterInitialClickOnSearch</td>
-<td class="success">0.287s</td>
+<td class="success">0.262s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkSongListItemChangesImageOnImageButtonClick</td>
-<td class="success">0.135s</td>
+<td class="success">0.136s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkWhenCurrentTrackChangesAndOldCurrentTrackIsNotPlayingImageRemains</td>
-<td class="success">0.301s</td>
+<td class="success">0.317s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkWhenCurrentTrackChangesAndOldCurrentTrackIsPlayingImageChangesToPaused</td>
-<td class="success">0.197s</td>
+<td class="success">0.256s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -478,7 +336,7 @@ resources.arsc in APK '/Users/mikhailshauchenka/.m2/repository/org/robolectric/a
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.4</a> at Feb 6, 2024, 10:28:57 AM</p>
+<a href="http://www.gradle.org">Gradle 8.4</a> at Feb 7, 2024, 5:26:26 PM</p>
 </div>
 </div>
 </body>
