@@ -3,10 +3,19 @@
 //import android.content.Context
 //import android.media.MediaPlayer
 //
-//object SingletonMediaPlayer (context : Context) : MediaPlayer() {
-//    var mediaPlayer : MediaPlayer = MediaPlayer()
 //
-//    fun init (context: Context){
-//        mediaPlayer.create(context, R.raw.wisdom)
+//object SingleTonPlayer {
+//    var mediaPlayer : MediaPlayer? = null
+//
+//        get() {
+//            if (field == null) {
+//                field = MediaPlayer()
+//            }
+//            return field
+//        }
+//
+//    fun create () {
+//        mediaPlayer = MediaPlayer.createeate(context, R.raw.wisdom)
 //    }
+//
 //}
