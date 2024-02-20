@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">7</div>
+<div class="counter">3</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">18.728s</div>
+<div class="counter">20.017s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">53%</div>
+<div class="percent">80%</div>
 <p>successful</p>
 </div>
 </td>
@@ -90,78 +90,6 @@
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
 	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
 	at org.hyperskill.musicplayer.Stage3UnitTest.checkCancelAddPlaylistKeepsPlayingCurrentSelectedSong(Stage3UnitTest.kt:499)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="checkControllerKeepsStateAfterCancelAddPlaylist"></a>
-<h3 class="failures">checkControllerKeepsStateAfterCancelAddPlaylist</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Wrong state of controller view after click on addPlaylistBtnCancel On controllerSeekBar progress expected:&lt;106&gt; but was:&lt;0&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests$ControllerViews.assertControllerState(MusicPlayerUnitTests.kt:450)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkControllerKeepsStateAfterCancelAddPlaylist$1.invoke(Stage3UnitTest.kt:963)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkControllerKeepsStateAfterCancelAddPlaylist$1.invoke(Stage3UnitTest.kt:932)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage3UnitTest.checkControllerKeepsStateAfterCancelAddPlaylist(Stage3UnitTest.kt:932)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="checkImgButtonPlayAfterMusicEnd"></a>
-<h3 class="failures">checkImgButtonPlayAfterMusicEnd</h3>
-<span class="code">
-<pre>java.lang.AssertionError: It should be possible to play again a song after song end. On mediaPlayer isPlaying expected:&lt;true&gt; but was:&lt;false&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertController(MusicPlayerUnitTests.kt:483)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertControllerPlay(MusicPlayerUnitTests.kt:469)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkImgButtonPlayAfterMusicEnd$1$1.invoke(Stage3UnitTest.kt:440)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkImgButtonPlayAfterMusicEnd$1$1.invoke(Stage3UnitTest.kt:423)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertSingleListItem(MusicPlayerUnitTests.kt:258)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkImgButtonPlayAfterMusicEnd$1.invoke(Stage3UnitTest.kt:423)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkImgButtonPlayAfterMusicEnd$1.invoke(Stage3UnitTest.kt:409)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage3UnitTest.checkImgButtonPlayAfterMusicEnd(Stage3UnitTest.kt:409)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -258,76 +186,6 @@
 </pre>
 </span>
 </div>
-<div class="test">
-<a name="checkPlayAfterMusicEnd"></a>
-<h3 class="failures">checkPlayAfterMusicEnd</h3>
-<span class="code">
-<pre>java.lang.AssertionError: It should be possible to play again a song after song end. On mediaPlayer isPlaying expected:&lt;true&gt; but was:&lt;false&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertController(MusicPlayerUnitTests.kt:483)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertControllerPlay(MusicPlayerUnitTests.kt:469)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkPlayAfterMusicEnd$1.invoke(Stage3UnitTest.kt:401)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkPlayAfterMusicEnd$1.invoke(Stage3UnitTest.kt:379)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage3UnitTest.checkPlayAfterMusicEnd(Stage3UnitTest.kt:379)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="checkSeekBarChangeAfterMusicEnd"></a>
-<h3 class="failures">checkSeekBarChangeAfterMusicEnd</h3>
-<span class="code">
-<pre>java.lang.AssertionError: It should be possible to change controllerSeekBar progress as user after a music ends and resume playing the song. On mediaPlayer isPlaying expected:&lt;true&gt; but was:&lt;false&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertController(MusicPlayerUnitTests.kt:483)
-	at org.hyperskill.musicplayer.internals.MusicPlayerUnitTests.assertControllerPlay(MusicPlayerUnitTests.kt:469)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkSeekBarChangeAfterMusicEnd$1.invoke(Stage3UnitTest.kt:371)
-	at org.hyperskill.musicplayer.Stage3UnitTest$checkSeekBarChangeAfterMusicEnd$1.invoke(Stage3UnitTest.kt:346)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity(AbstractUnitTest.kt:84)
-	at org.hyperskill.musicplayer.internals.AbstractUnitTest.testActivity$default(AbstractUnitTest.kt:75)
-	at org.hyperskill.musicplayer.Stage3UnitTest.checkSeekBarChangeAfterMusicEnd(Stage3UnitTest.kt:346)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:591)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:274)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:88)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-</pre>
-</span>
-</div>
 </div>
 <div id="tab1" class="tab">
 <h2>Tests</h2>
@@ -341,77 +199,77 @@
 </thead>
 <tr>
 <td class="failures">checkCancelAddPlaylistKeepsPlayingCurrentSelectedSong</td>
-<td class="failures">0.434s</td>
+<td class="failures">0.500s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">checkControllerKeepsStateAfterCancelAddPlaylist</td>
-<td class="failures">0.421s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">checkControllerTriggersMediaPlayerOnDefaultItem</td>
-<td class="success">1.889s</td>
+<td class="success">checkControllerKeepsStateAfterCancelAddPlaylist</td>
+<td class="success">0.485s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">checkImgButtonPlayAfterMusicEnd</td>
-<td class="failures">0.843s</td>
-<td class="failures">failed</td>
+<td class="success">checkControllerTriggersMediaPlayerOnDefaultItem</td>
+<td class="success">1.840s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkImgButtonPlayAfterMusicEnd</td>
+<td class="success">0.865s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkImgButtonTriggersMediaPlayerOnListItem</td>
-<td class="success">9.306s</td>
+<td class="success">9.960s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">checkLoadPlaylistChangesSongIfCurrentSelectedSongNotInPlaylist</td>
-<td class="failures">0.516s</td>
+<td class="failures">0.619s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">checkLoadPlaylistKeepsPlayingCurrentSelectedSong</td>
-<td class="failures">0.979s</td>
+<td class="failures">1.187s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">checkMusicEnd</td>
-<td class="success">0.363s</td>
+<td class="success">0.404s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">checkPlayAfterMusicEnd</td>
-<td class="failures">0.480s</td>
-<td class="failures">failed</td>
+<td class="success">checkPlayAfterMusicEnd</td>
+<td class="success">0.602s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkSeekBarAfterPause</td>
-<td class="success">0.420s</td>
+<td class="success">0.437s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkSeekBarAfterStop</td>
-<td class="success">0.319s</td>
+<td class="success">0.376s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkSeekBarBeforePlaying</td>
-<td class="success">0.284s</td>
+<td class="success">0.337s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">checkSeekBarChangeAfterMusicEnd</td>
-<td class="failures">0.803s</td>
-<td class="failures">failed</td>
+<td class="success">checkSeekBarChangeAfterMusicEnd</td>
+<td class="success">0.785s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkSeekBarChangeWhilePlaying</td>
-<td class="success">0.248s</td>
+<td class="success">0.344s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">checkSongChange</td>
-<td class="success">1.423s</td>
+<td class="success">1.276s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -432,7 +290,7 @@ resources.arsc in APK '/Users/mikhailshauchenka/.m2/repository/org/robolectric/a
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.4</a> at Feb 19, 2024, 6:11:57 PM</p>
+<a href="http://www.gradle.org">Gradle 8.4</a> at Feb 20, 2024, 12:25:29 PM</p>
 </div>
 </div>
 </body>
