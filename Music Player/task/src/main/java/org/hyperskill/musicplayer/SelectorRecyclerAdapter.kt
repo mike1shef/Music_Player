@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
 
 class SelectorRecyclerAdapter (
-     loadedPlaylist : List<SongSelector>,
+    loadedPlaylist : List<SongSelector>,
     private val viewModel : MainViewModel,
-    ) : ListAdapter<SongSelector, SelectorRecyclerAdapter.SelectorViewHolder>(
+) : ListAdapter<SongSelector, SelectorRecyclerAdapter.SelectorViewHolder>(
     object : DiffUtil.ItemCallback<SongSelector>() {
         override fun areItemsTheSame(oldItem: SongSelector, newItem: SongSelector): Boolean {
             return oldItem.song == newItem.song
@@ -44,32 +44,32 @@ class SelectorRecyclerAdapter (
             }
         }
     }){
-        init { submitList(loadedPlaylist)}
+    init { submitList(loadedPlaylist)}
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectorViewHolder {
-            val holder = SelectorViewHolder(LayoutInflater.from(parent.context)
-                .inflate(R.layout.list_item_song_selector, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectorViewHolder {
+        val holder = SelectorViewHolder(LayoutInflater.from(parent.context)
+            .inflate(R.layout.list_item_song_selector, parent, false))
 
-            holder.itemView.setOnClickListener {
-                val position = holder.adapterPosition
-                val songSelector = getItem(position)
+        holder.itemView.setOnClickListener {
+            val position = holder.adapterPosition
+            val songSelector = getItem(position)
 
-                if (position != RecyclerView.NO_POSITION) {
-                    if (songSelector.isSelected) {
-                        songSelector.isSelected = false
-                        holder.checkbox.isChecked = false
-                        holder.itemView.setBackgroundColor(Color.WHITE)
-                    } else {
-                        songSelector.isSelected = true
-                        holder.checkbox.isChecked = true
-                       holder.itemView.setBackgroundColor(Color.LTGRAY)
+            if (position != RecyclerView.NO_POSITION) {
+                if (songSelector.isSelected) {
+                    songSelector.isSelected = false
+                    holder.checkbox.isChecked = false
+                    holder.itemView.setBackgroundColor(Color.WHITE)
+                } else {
+                    songSelector.isSelected = true
+                    holder.checkbox.isChecked = true
+                    holder.itemView.setBackgroundColor(Color.LTGRAY)
 
-                    }
                 }
             }
-
-            return holder
         }
+
+        return holder
+    }
 
     override fun onBindViewHolder(holder: SelectorViewHolder, position: Int) {
         val song = getItem(position)
@@ -94,6 +94,6 @@ class SelectorRecyclerAdapter (
         val title = view.findViewById<TextView>(R.id.songSelectorItemTvTitle)
         val checkbox = view.findViewById<CheckBox>(R.id.songSelectorItemCheckBox)
         val duration = view.findViewById<TextView>(R.id.songSelectorItemTvDuration)
-        }
-
     }
+
+}

@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class MyDataBaseHelper (context: Context) : SQLiteOpenHelper (context, DB_NAME, null,DB_VERSION) {
     companion object{
-        private val DB_NAME = "musicPlayerDatabase"
+        private val DB_NAME = "musicPlayerDatabase.db"
         private val DB_VERSION = 1
         private val tableName = "playlist"
         private val columnPlaylistName = "playlistName"
@@ -15,17 +15,29 @@ class MyDataBaseHelper (context: Context) : SQLiteOpenHelper (context, DB_NAME, 
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val CREATE_TABLE = "CREATE TABLE IF NOT EXISTS $tableName(" +
-                "$columnPlaylistName TEXT, " +
-                "$columnSongId INTEGER, " +
-                "PRIMARY KEY ($columnPlaylistName, $columnSongId));"
-        db?.execSQL(CREATE_TABLE)
+        createTable(db)
+
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         val DROP_TABLE = "DROP TABLE IF EXISTS $tableName"
         db?.execSQL(DROP_TABLE)
         onCreate(db)
+    }
+
+    override fun onOpen(db: SQLiteDatabase?) {
+        super.onOpen(db)
+        if (db != null && !db.isOpen) {
+            createTable(db)
+        }
+    }
+
+    private fun createTable(db: SQLiteDatabase?) {
+        val CREATE_TABLE = "CREATE TABLE IF NOT EXISTS $tableName(" +
+                "$columnPlaylistName TEXT, " +
+                "$columnSongId INTEGER, " +
+                "PRIMARY KEY ($columnPlaylistName, $columnSongId));"
+        db?.execSQL(CREATE_TABLE)
     }
 
     fun removePlaylist (playlistName : String) {

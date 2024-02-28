@@ -15,31 +15,31 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"/>
 
-        <TextView
-            android:id="@+id/songSelectorItemTvArtist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="@+id/songSelectorItemCheckBox"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/songSelectorItemCheckBox"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="13sp"
-            tools:text="artist1" />
+    <TextView
+        android:id="@+id/songSelectorItemTvArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="@+id/songSelectorItemCheckBox"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/songSelectorItemCheckBox"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="13sp"
+        tools:text="artist1" />
 
-        <TextView
-            android:id="@+id/songSelectorItemTvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/songSelectorItemCheckBox"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
-            android:textSize="13sp"
-            android:layout_marginBottom="5dp"
-            android:textColor="@color/design_default_color_on_secondary"
-            android:layout_below="@id/songSelectorItemTvArtist"
-            tools:text="title 1" />
+    <TextView
+        android:id="@+id/songSelectorItemTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/songSelectorItemCheckBox"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:layout_below="@id/songSelectorItemTvArtist"
+        tools:text="title 1" />
 
     <TextView
         android:id="@+id/songSelectorItemTvDuration"
